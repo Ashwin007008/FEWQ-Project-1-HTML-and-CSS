@@ -1,0 +1,142 @@
+/* This CSS file styles only the home page (index.html) */
+
+/* Body: sets background color, font, and overall margin */
+body {
+    background: #e5ecff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header: gives a background and white text */
+header {
+    background: #223366;
+    padding: 10px 0;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;    /* Arrange links side by side */
+    justify-content: center; /* Center the nav */
+    gap: 25px;        /* Space out nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;          /* White text */
+    text-decoration: none;/* Remove underline */
+    font-weight: bold;
+    padding: 8px 14px;    /* Padding around text */
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: #99bbff;  /* Highlight when mouse is over */
+    color: #223366;
+}
+
+/* Main content area larger and centered */
+main {
+    max-width: 680px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+/* Transparent image styling */
+.transparent-img {
+    width: 200px;         /* image width */
+    opacity: 0.7;         /* Make image partly see-through (transparent) */
+    margin-top: 20px;
+    border-radius: 8px;
+}
+/* style-index.css */
+
+/* Video background styles */
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay for content */
+.overlay {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3); /* subtle overlay for readability */
+}
+
+/* Animated motivational words */
+.motivation span {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0.3em;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.motivation span:nth-child(1) { animation-delay: 0.2s; }
+.motivation span:nth-child(2) { animation-delay: 0.5s; }
+.motivation span:nth-child(3) { animation-delay: 0.8s; }
+.motivation span:nth-child(4) { animation-delay: 1.1s; }
+.motivation span:nth-child(5) { animation-delay: 1.4s; }
+.motivation span:nth-child(6) { animation-delay: 1.7s; }
+.motivation span:nth-child(7) { animation-delay: 2.0s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.3);
+  padding: 0.5em 1.5em;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .motivation span {
+    font-size: 1.3rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+  }
+}
+
+/* Footer style */
+footer {
+    background: #223366;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
